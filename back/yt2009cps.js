@@ -9,7 +9,7 @@ module.exports = {
     "get_search": function(req, res) {
         req = utils.addFakeCookie(req)
         
-        let compatAuth = false;
+        let compatAuth = true;
         if((req.headers.referer && req.headers.referer.includes(".swf"))
         || (req.headers["user-agent"]
         && req.headers["user-agent"].includes("Shockwave Flash"))) {
